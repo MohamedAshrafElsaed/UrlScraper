@@ -155,7 +155,7 @@ func getMetaTags(url string) (*MetaTagsResponse, error) {
 func toCamelCase(str string) string {
 	parts := strings.Split(str, ":")
 	for i := 1; i < len(parts); i++ {
-		parts[i] = strings.Title(parts[i])
+		parts[i] = strings.ToTitle(parts[i])
 	}
 	return strings.Join(parts, "")
 }
